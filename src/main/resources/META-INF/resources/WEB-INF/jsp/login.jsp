@@ -1,11 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky Login Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-    <body>
+<%@ include file="common/header.jspf"%>
         <div class="container">
             <h1>Login</h1>
             <pre>${errorMessage}</pre>
@@ -15,5 +8,4 @@
                 <input type="submit">
             </form>
         </div>
-    </body>
-</html>
+<%@ include file="common/footer.jspf"%>

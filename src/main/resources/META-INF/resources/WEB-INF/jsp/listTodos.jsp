@@ -1,10 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-    <head>
-        <title>Our Funky To Do Page</title>
-        <link href="webjars/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
+        <%@ include file="common/header.jspf" %>
+        <%@ include file="common/navigation.jspf" %>
         <div class="container">
             <div>
                 <h1>Welcome to todos page ${name}</h1>
@@ -12,7 +7,6 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>id</th>
                             <th>Description</th>
                             <th>Target Date</th>
                             <th>Is Done?</th>
@@ -23,7 +17,6 @@
                     <tbody>
                         <c:forEach items="${todos}" var="todo">
                             <tr>
-                                <td>${todo.id}</td>
                                 <td>${todo.description}</td>
                                 <td>${todo.target}</td>
                                 <td>${todo.done}</td>
@@ -35,8 +28,4 @@
                 </table>
                 <a href="add-todo" class="btn btn-success">Add Todo</a>
             </div>
-            <script src="webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-            <script src="webjars/jquery/3.6.4/jquery.min.js"></script>
-        </div>
-    </body>
-</html>
+        <%@ include file="common/footer.jspf" %>
